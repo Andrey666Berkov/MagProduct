@@ -19,10 +19,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Login  build
+      - name: Docker  build
         run: |
           docker login ghcr.io -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}
-          docker build -f ./src/VagProduct.WebApi/Dockerfile -t ghcr.io/andrey666berkov/magproduct/magproduct:latest .
+          docker build -f /src/VagProduct.WebApi/Dockerfile -t ghcr.io/andrey666berkov/magproduct/magproduct:latest .
       
       - name: docker push
         run: |
