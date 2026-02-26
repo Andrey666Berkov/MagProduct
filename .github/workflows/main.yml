@@ -18,7 +18,7 @@ jobs:
       
       - name: docker push
         run: |
-          docker login ghcr.io/${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}
+          docker login ghcr.io -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}
           docker push ghcr.io/andrey666berkov/magproduct/magproduct:latest
 
       - name: Deploy to Server
