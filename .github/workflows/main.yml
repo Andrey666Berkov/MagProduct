@@ -1,0 +1,39 @@
+name: Magazina backend
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: action/checkout@v4
+
+      - name: Login to GHCR
+        run: |
+          docker login ghcr.io/${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}
+          docker build -t ghcr.io/andrey666berkov/magproduct/magproduct:latest .
+      
+      - name: docker push
+        run: |
+          docker login ghcr.io/${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}
+          docker push ghcr.io/andrey666berkov/magproduct/magproduct:latest
+
+      - name: Deploy to Server
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.PASS }}
+          port: 22
+          script: |
+            set -euo pipefail
+            cd /var/www/magproduct/
+            docker-compose pull
+            docker-compose up -d
+            docker ps
+          
+          
+          
