@@ -1,5 +1,8 @@
 using MagProd.Infrastructure;
+using MagProd.Infrastructure.Context;
 using MagProduct.Application;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Design;
 using VagProd.WebApi;
 using VagProd.WebApi.Seeding;
 
@@ -24,6 +27,12 @@ builder.Services
 
 
 var app = builder.Build();
+using (var scopeDb = app.Services.CreateScope())
+{
+    var dbContext = scopeDb.ServiceProvider.GetRequiredService<AppDbContext>();
+    dbContext.Database.Migrate(); 
+}
+
 app.UseCors(c =>
 {
     c.AllowAnyHeader();
@@ -53,3 +62,4 @@ await seed.Seeding();
 
 
 app.Run();
+

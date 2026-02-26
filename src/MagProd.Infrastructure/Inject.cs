@@ -1,3 +1,4 @@
+using MagProd.Infrastructure.Context;
 using MagProd.Infrastructure.Repository;
 using MagProduct.Application.Interfaces;
 using Microsoft.EntityFrameworkCore;
@@ -16,7 +17,7 @@ public static class Inject
         // services.AddDbContext<AppDbContext>();
          services.AddDbContext<AppDbContext>
              (op=>op
-                 .UseNpgsql("Host=localhost;Port=5435;Database=productdb;Username=postgres;Password=postgres"));
+                 .UseNpgsql(configuration.GetConnectionString("DefaultConnection")));
 
              services.AddScoped<DapperDbContext>();
              services.AddScoped<IProductReadRepository, ProductReadRepository>();

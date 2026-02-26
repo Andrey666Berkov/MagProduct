@@ -1,9 +1,24 @@
 ﻿services:
+  prod_backend:
+    image: vagprod.webapi    
+    ports:
+      - "8080:8080"
+    build:
+      context: .
+      dockerfile: src/VagProd.WebApi/Dockerfile
+    networks:
+      - my_network
+    
+    depends_on:
+      - postgres
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Docker
+      
   postgres:
     image: postgres:latest
     container_name: postgreUser
     ports:
-      - "5435:5432"
+      - "5436:5432"
     restart: always
     environment:
       POSTGRES_DB: productdb
@@ -11,7 +26,11 @@
       POSTGRES_PASSWORD: postgres
     volumes:
       - postgres_data:/var/lib/postgresql/data/pgdata
-  
+    networks:
+      - my_network
+
+networks:
+  my_network: 
   
 volumes:
    postgres_data:

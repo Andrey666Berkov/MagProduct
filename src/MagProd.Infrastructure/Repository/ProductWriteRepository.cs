@@ -1,4 +1,5 @@
-﻿using MagProduct.Application.Interfaces;
+﻿using MagProd.Infrastructure.Context;
+using MagProduct.Application.Interfaces;
 using MagProduct.Core;
 using Microsoft.EntityFrameworkCore;
 

@@ -1,6 +1,6 @@
 using MagProduct.Core;
 
-namespace MagProd.Infrastructure;
+namespace MagProduct.Application.Interfaces;
 
 public interface IProductReadRepository
 {

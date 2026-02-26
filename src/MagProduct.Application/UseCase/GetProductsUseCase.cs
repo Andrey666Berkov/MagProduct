@@ -1,5 +1,4 @@
 ﻿using CSharpFunctionalExtensions;
-using MagProd.Infrastructure;
 using MagProduct.Application.Dto;
 using MagProduct.Application.Interfaces;
 using MagProduct.Core;

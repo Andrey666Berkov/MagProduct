@@ -1,4 +1,6 @@
 using Dapper;
+using MagProd.Infrastructure.Context;
+using MagProduct.Application.Interfaces;
 using MagProduct.Core;
 
 namespace MagProd.Infrastructure.Repository;

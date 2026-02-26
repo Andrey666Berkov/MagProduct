@@ -1,5 +1,6 @@
 using System.Text.Json;
 using MagProd.Infrastructure;
+using MagProd.Infrastructure.Context;
 using MagProduct.Application.Interfaces;
 using MagProduct.Core;
 

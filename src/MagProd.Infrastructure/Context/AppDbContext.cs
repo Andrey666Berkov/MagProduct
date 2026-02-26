@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace MagProd.Infrastructure;
+namespace MagProd.Infrastructure.Context;
 
 public class AppDbContext : DbContext
 {
@@ -51,14 +51,16 @@ public class RatingConfiguration : IEntityTypeConfiguration<Rating>
 }
 
 
-public class AppDbContextFactory : IDesignTimeDbContextFactory<AppDbContext>
+public class AppDbContextFactory
+    : IDesignTimeDbContextFactory<AppDbContext>
 {
     
     public AppDbContext CreateDbContext(string[] args)
     {
+       
         var optionsBuilder = new DbContextOptionsBuilder<AppDbContext>();
 
-        optionsBuilder.UseNpgsql("Host=localhost;Port=5435;Database=productdb;Username=postgres;Password=postgres");
+        optionsBuilder.UseNpgsql("Host=localhost;Port=5436;Database=productdb;Username=postgres;Password=postgres");
 
         return new AppDbContext(optionsBuilder.Options);
     }
