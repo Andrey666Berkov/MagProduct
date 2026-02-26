@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A15D4437-8BDE-48B6-B1BF-C93196FE6776}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagProduct.Core", "src\MagProduct.Core\MagProduct.Core.csproj", "{3D2C968C-0E8D-4628-9ACC-A37D91CDA9D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagProduct.Application", "src\MagProduct.Application\MagProduct.Application.csproj", "{DD267940-23B7-4F30-8240-2CB098FBE896}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagShared", "src\MagShared\MagShared.csproj", "{223B908E-66DA-4047-BD02-A1B831D31967}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VagProd.WebApi", "src\VagProd.WebApi\VagProd.WebApi.csproj", "{2E68EC77-3F31-4869-A6F1-028FA7254AA8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagProd.Infrastructure", "src\MagProd.Infrastructure\MagProd.Infrastructure.csproj", "{C1F85282-B199-4BDE-B0EA-F73048583855}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FE901BFA-7FAA-4D72-9E76-E3BCC8B05438}"
+	ProjectSection(SolutionItems) = preProject
+		compose.yaml = compose.yaml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D2C968C-0E8D-4628-9ACC-A37D91CDA9D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D2C968C-0E8D-4628-9ACC-A37D91CDA9D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D2C968C-0E8D-4628-9ACC-A37D91CDA9D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D2C968C-0E8D-4628-9ACC-A37D91CDA9D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD267940-23B7-4F30-8240-2CB098FBE896}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD267940-23B7-4F30-8240-2CB098FBE896}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD267940-23B7-4F30-8240-2CB098FBE896}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD267940-23B7-4F30-8240-2CB098FBE896}.Release|Any CPU.Build.0 = Release|Any CPU
+		{223B908E-66DA-4047-BD02-A1B831D31967}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{223B908E-66DA-4047-BD02-A1B831D31967}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{223B908E-66DA-4047-BD02-A1B831D31967}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{223B908E-66DA-4047-BD02-A1B831D31967}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E68EC77-3F31-4869-A6F1-028FA7254AA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E68EC77-3F31-4869-A6F1-028FA7254AA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E68EC77-3F31-4869-A6F1-028FA7254AA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E68EC77-3F31-4869-A6F1-028FA7254AA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1F85282-B199-4BDE-B0EA-F73048583855}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1F85282-B199-4BDE-B0EA-F73048583855}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1F85282-B199-4BDE-B0EA-F73048583855}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1F85282-B199-4BDE-B0EA-F73048583855}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3D2C968C-0E8D-4628-9ACC-A37D91CDA9D5} = {A15D4437-8BDE-48B6-B1BF-C93196FE6776}
+		{DD267940-23B7-4F30-8240-2CB098FBE896} = {A15D4437-8BDE-48B6-B1BF-C93196FE6776}
+		{223B908E-66DA-4047-BD02-A1B831D31967} = {A15D4437-8BDE-48B6-B1BF-C93196FE6776}
+		{2E68EC77-3F31-4869-A6F1-028FA7254AA8} = {A15D4437-8BDE-48B6-B1BF-C93196FE6776}
+		{C1F85282-B199-4BDE-B0EA-F73048583855} = {A15D4437-8BDE-48B6-B1BF-C93196FE6776}
+	EndGlobalSection
+EndGlobal
